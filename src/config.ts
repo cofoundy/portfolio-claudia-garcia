@@ -104,14 +104,6 @@ export const siteConfig = {
   ],
   education: [
     {
-      school: "Columbia University",
-      degree: "Construction Project Management",
-      dateRange: "2024",
-      achievements: [
-        "Professional development in construction project management",
-      ],
-    },
-    {
       school: "University of Toronto, Faculty of Law",
       degree: "Global Professional Master of Laws (LLM)",
       dateRange: "2019",
@@ -130,5 +122,32 @@ export const siteConfig = {
       ],
     },
   ],
-  languages: ["Spanish (native)", "French (intermediate)", "Italian (basic)", "Portuguese (basic)"],
+  languages: [
+    { name: "English", level: "Native / Bilingual" },
+    { name: "Spanish", level: "Native" },
+    { name: "French", level: "Professional Working" },
+    { name: "Italian", level: "Basic" },
+    { name: "Portuguese", level: "Basic" },
+  ],
+  credentials: [
+    {
+      category: "Bar Admissions",
+      items: [
+        { title: "Barrister & Solicitor", institution: "Law Society of Ontario", year: "2020" },
+      ],
+    },
+    {
+      category: "Professional Memberships",
+      items: [
+        { title: "Rocky Mountain Mineral Law Foundation", institution: "Hispanics in Mining", year: "2020" },
+      ],
+    },
+    {
+      category: "Certifications",
+      items: [
+        { title: "Construction Project Management", institution: "Columbia University", year: "2024" },
+        { title: "Construction & Infrastructure Disputes", institution: "Osler", year: "" },
+      ],
+    },
+  ],
 };
