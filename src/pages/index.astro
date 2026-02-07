@@ -1,12 +1,13 @@
 ---
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
+import Languages from "../components/Languages.astro";
 import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
 import Credentials from "../components/Credentials.astro";
-import Languages from "../components/Languages.astro";
+import CoachingCTA from "../components/CoachingCTA.astro";
 import Footer from "../components/Footer.astro";
 import { siteConfig } from "../config";
 import "../styles/global.css";
@@ -22,35 +23,47 @@ import "../styles/global.css";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <title>{siteConfig.name} - {siteConfig.title}</title>
   </head>
   <body>
     <Header />
-    <section>
+    <main>
       <Hero />
+      <Languages />
       <About />
       <Projects />
       <Experience />
       <Education />
       <Credentials />
-      <Languages />
-    </section>
+      <CoachingCTA />
+    </main>
     <Footer />
+
+    <!-- Scroll Reveal Animation Script -->
     <script>
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.1
+      };
+
+      const revealOnScroll = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(revealOnScroll, observerOptions);
+
+      document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+        observer.observe(el);
+      });
     </script>
   </body>
 </html>

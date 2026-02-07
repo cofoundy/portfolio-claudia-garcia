@@ -1,0 +1,32 @@
+---
+import { siteConfig } from "../config";
+const hasCta = siteConfig.cta;
+---
+
+{hasCta && (
+  <section id="cta" class="py-16 lg:py-20" style={`background-color: ${siteConfig.colors.primaryDark}`}>
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center reveal">
+      <h2
+        class="text-3xl sm:text-4xl lg:text-5xl font-bold"
+        style={`color: ${siteConfig.colors.accent}`}
+      >
+        {siteConfig.cta.title}
+      </h2>
+      <p
+        class="mt-4 text-base lg:text-lg leading-relaxed max-w-2xl mx-auto"
+        style={`color: ${siteConfig.colors.surface}cc`}
+      >
+        {siteConfig.cta.description}
+      </p>
+      <div class="mt-8">
+        <a
+          href={`mailto:${siteConfig.social?.email}?subject=${encodeURIComponent(siteConfig.cta.emailSubject || '')}`}
+          class="btn-hover inline-block px-8 py-3.5 rounded-full font-semibold text-sm tracking-wide"
+          style={`background-color: ${siteConfig.colors.accent}; color: white`}
+        >
+          {siteConfig.cta.buttonText}
+        </a>
+      </div>
+    </div>
+  </section>
+)}

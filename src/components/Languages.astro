@@ -1,40 +1,81 @@
 ---
 import { siteConfig } from "../config";
 const hasLanguages = siteConfig.languages && siteConfig.languages.length > 0;
+
+function getDots(level: string): number {
+  if (level.includes("Native") || level.includes("Bilingual")) return 5;
+  if (level.includes("Professional")) return 4;
+  if (level.includes("Intermediate")) return 3;
+  if (level.includes("Basic") || level.includes("Elementary")) return 2;
+  return 1;
+}
 ---
 
-{
-  hasLanguages && (
-    <section id="languages" class="p-8 sm:p-12 md:p-16 lg:p-24 reveal">
-      <div>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
-              Languages
-            </h2>
-            <div
-              class="w-[75px] h-[5px] mt-2 rounded-full"
-              style={`background-color: ${siteConfig.accentColor}`}
-            />
-          </div>
+{hasLanguages && (
+  <section id="languages" class="py-16 lg:py-20" style={`background-color: ${siteConfig.colors.surface}`}>
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+        <!-- Section Header -->
+        <div class="lg:col-span-4 reveal-left">
+          <h2
+            class="text-3xl sm:text-4xl lg:text-5xl font-bold"
+            style={`color: ${siteConfig.colors.primaryDark}`}
+          >
+            Languages
+          </h2>
+          <div
+            class="w-[60px] h-[4px] mt-3 rounded-full"
+            style={`background-color: ${siteConfig.colors.accent}`}
+          ></div>
+          <p
+            class="mt-4 text-sm leading-relaxed"
+            style={`color: ${siteConfig.colors.primaryDark}70`}
+          >
+            Multilingual professional bridging legal frameworks across jurisdictions.
+          </p>
+        </div>
 
-          <div class="lg:col-span-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {siteConfig.languages.map((lang) => (
-                <div class="flex items-center justify-between bg-white rounded-lg border border-gray-100 p-4 hover:shadow-md transition-shadow duration-300">
-                  <span class="text-lg font-semibold text-gray-900">{lang.name}</span>
-                  <span
-                    class="text-sm font-medium px-3 py-1 rounded-full"
-                    style={`background-color: ${siteConfig.accentColor}15; color: ${siteConfig.accentColor}`}
-                  >
-                    {lang.level}
-                  </span>
+        <!-- Language Bars -->
+        <div class="lg:col-span-8">
+          <div class="space-y-6">
+            {siteConfig.languages.map((lang: any, i: number) => {
+              const dots = getDots(lang.level);
+              return (
+                <div class={`reveal stagger-${Math.min(i + 1, 6)} flex items-center justify-between`}>
+                  <div class="flex items-center gap-4 min-w-[140px]">
+                    <span
+                      class="text-base font-semibold"
+                      style={`color: ${siteConfig.colors.primaryDark}`}
+                    >
+                      {lang.name}
+                    </span>
+                  </div>
+
+                  <div class="flex items-center gap-4">
+                    <div class="flex gap-2">
+                      {[1, 2, 3, 4, 5].map((dot) => (
+                        <div
+                          class="w-3 h-3 rounded-full dot-animate"
+                          style={`
+                            background-color: ${dot <= dots ? siteConfig.colors.accent : siteConfig.colors.primaryDark + '15'};
+                            animation-delay: ${(i * 0.1) + (dot * 0.05)}s;
+                          `}
+                        ></div>
+                      ))}
+                    </div>
+                    <span
+                      class="text-xs min-w-[120px] text-right"
+                      style={`color: ${siteConfig.colors.primaryDark}60`}
+                    >
+                      {lang.level}
+                    </span>
+                  </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>
-    </section>
-  )
-}
+    </div>
+  </section>
+)}

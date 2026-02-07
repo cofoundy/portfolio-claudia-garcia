@@ -2,39 +2,70 @@
 import { siteConfig } from "../config";
 ---
 
-<section id="about" class="p-8 sm:p-12 md:p-16 lg:p-24 reveal">
-  <div>
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-      <div class="lg:col-span-4">
+<section id="about" class="py-16 lg:py-24" style={`background-color: ${siteConfig.colors.surfaceLight}`}>
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      <!-- Section Header -->
+      <div class="lg:col-span-3 reveal-left">
         <h2
-          class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900"
+          class="text-3xl sm:text-4xl lg:text-5xl font-bold"
+          style={`color: ${siteConfig.colors.primaryDark}`}
         >
-          About Me
+          About
         </h2>
         <div
-          class="w-[75px] h-[5px] mt-2 rounded-full"
-          style={`background-color: ${siteConfig.accentColor}`}
-        >
-        </div>
+          class="w-[60px] h-[4px] mt-3 rounded-full"
+          style={`background-color: ${siteConfig.colors.accent}`}
+        ></div>
       </div>
 
-      <div class="lg:col-span-8 space-y-8">
-        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
+      <!-- About Text -->
+      <div class="lg:col-span-5 reveal stagger-1">
+        <p
+          class="text-base leading-relaxed"
+          style={`color: ${siteConfig.colors.primaryDark}cc`}
+        >
           {siteConfig.aboutMe}
         </p>
 
-        <div class="pt-4">
-          <div class="flex flex-wrap gap-3">
-            {
-              siteConfig.skills.map((skill) => (
-                <span class="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 text-gray-800 rounded-full text-sm sm:text-base md:text-lg font-medium hover:bg-gray-200 transition-colors duration-200">
-                  {skill}
-                </span>
-              ))
-            }
+        {siteConfig.skills && siteConfig.skills.length > 0 && (
+          <div class="mt-8 flex flex-wrap gap-2">
+            {siteConfig.skills.map((skill: string) => (
+              <span
+                class="skill-hover px-3 py-1.5 rounded-full text-xs font-medium"
+                style={`background-color: ${siteConfig.colors.accent}12; color: ${siteConfig.colors.accent}; border: 1px solid ${siteConfig.colors.accent}25`}
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <!-- Floating Quote -->
+      {siteConfig.quote && (
+        <div class="lg:col-span-4 reveal-right stagger-2">
+          <div class="quote-float">
+            <div
+              class="p-6 rounded-xl border-l-4"
+              style={`background-color: white; border-color: ${siteConfig.colors.accent}; box-shadow: 0 4px 20px rgba(0,0,0,0.06)`}
+            >
+              <p
+                class="text-base italic leading-relaxed"
+                style={`color: ${siteConfig.colors.primaryDark}; font-family: 'DM Serif Display', serif`}
+              >
+                "{siteConfig.quote.text}"
+              </p>
+              <p
+                class="mt-3 text-xs font-semibold tracking-wide uppercase"
+                style={`color: ${siteConfig.colors.accent}`}
+              >
+                — {siteConfig.quote.author}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   </div>
 </section>

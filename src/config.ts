@@ -3,6 +3,31 @@ export const siteConfig = {
   title: "Contract Manager & Construction Lawyer | Ontario Bar",
   description: "Portfolio of Claudia Garcia - International Lawyer specializing in construction law, contract management, and dispute resolution in Toronto, Canada",
   accentColor: "#4A90A4",
+  colors: {
+    primaryDark: "#1b2838",
+    primary: "#243447",
+    primaryLight: "#2d4156",
+    accent: "#4A90A4",
+    surface: "#f0f4f7",
+    surfaceLight: "#f8fafb",
+  },
+  tagline: "Bridging legal frameworks across borders — from Lima courtrooms to Toronto boardrooms.",
+  stats: [
+    { value: "10+", label: "Years Experience" },
+    { value: "CAD$80M+", label: "Value Secured" },
+    { value: "5", label: "Languages" },
+    { value: "2", label: "Jurisdictions" },
+  ],
+  quote: {
+    text: "The best contract is one that never needs to be litigated.",
+    author: "Claudia Garcia",
+  },
+  cta: {
+    title: "Need a Construction Lawyer?",
+    description: "Whether it's contract management, dispute resolution, or navigating international legal frameworks — let's discuss how I can help protect your interests.",
+    buttonText: "Get in Touch",
+    emailSubject: "Legal Consultation Inquiry",
+  },
   social: {
     email: "cgarciamera@gmail.com",
     linkedin: "https://www.linkedin.com/in/claudiagarciamera",
@@ -48,9 +73,8 @@ export const siteConfig = {
       dateRange: "2022 - Present",
       bullets: [
         "Secured an increase of CAD$80+ million in project value through change management",
-        "Manage negotiation of variations, contract amendments, and claim management based on contractual interpretation and construction law",
-        "Develop pragmatic commercial strategies based on contractual analysis to protect interests with customers, consortium partners, and subcontractors",
-        "Draft and review subcontracts ensuring terms, conditions, and risks are properly identified and mitigated",
+        "Manage negotiation of variations, contract amendments, and claim management",
+        "Develop pragmatic commercial strategies to protect interests with customers and partners",
       ],
     },
     {
@@ -59,7 +83,7 @@ export const siteConfig = {
       dateRange: "2021",
       bullets: [
         "Spearheaded the revamping of the Senior Credit Risk Committee",
-        "Coordinated priorities, monitored project implementation, and managed internal communications",
+        "Coordinated priorities, monitored project implementation, and managed communications",
       ],
     },
     {
@@ -67,8 +91,8 @@ export const siteConfig = {
       title: "Articling Student - Commercial Litigation & Class Actions",
       dateRange: "2020",
       bullets: [
-        "Prepared briefs, motion materials and legal memoranda for 15+ litigation files including rail and mining infrastructure cases",
-        "Assisted counsel in trial hearings and liaised with fact and expert witnesses in high-profile litigation",
+        "Prepared briefs, motion materials and legal memoranda for 15+ litigation files",
+        "Assisted counsel in trial hearings and liaised with witnesses in high-profile litigation",
       ],
     },
     {
@@ -76,9 +100,9 @@ export const siteConfig = {
       title: "Consultant - Litigation & International Arbitration",
       dateRange: "2018 - 2019",
       bullets: [
-        "Acted as second chair for counsel in an investor-state arbitration for a mining project valued at over USD$300 million",
+        "Second chair for investor-state arbitration for a mining project valued at USD$300M+",
         "Conducted 20+ fact and expert witness interviews and assisted with report drafting",
-        "Managed document review and discovery, completing briefs to support preparation of memorials",
+        "Managed document review and discovery, completing briefs for memorials",
       ],
     },
     {
@@ -86,9 +110,9 @@ export const siteConfig = {
       title: "Legal Counsel - Power and Energy Infrastructure",
       dateRange: "2013 - 2017",
       bullets: [
-        "Ensured compliance for all stages of energy projects, enforcing terms, conditions, and applicable law and regulations",
-        "Formulated strategy and performed legal analysis for public investigations, administrative tribunals, and court proceedings",
-        "Trained officials and government bodies in environmental compliance via 50+ seminars, including the UN COP20 convention",
+        "Ensured compliance for all stages of energy projects and applicable regulations",
+        "Formulated strategy for public investigations and administrative tribunals",
+        "Trained officials via 50+ seminars including the UN COP20 convention",
       ],
     },
     {
@@ -98,7 +122,6 @@ export const siteConfig = {
       bullets: [
         "Led 20+ commercial files at different stages of dispute resolution",
         "Responsible for all contract drafting and negotiations",
-        "Acted as Secretary to the arbitral tribunal in 2 arbitration files",
       ],
     },
   ],

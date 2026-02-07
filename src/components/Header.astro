@@ -1,91 +1,88 @@
 ---
 import { siteConfig } from "../config";
-
-const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
-const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
-const hasEducation = siteConfig.education && siteConfig.education.length > 0;
-const hasCredentials = siteConfig.credentials && siteConfig.credentials.length > 0;
 ---
 
+<!-- Floating Pill Nav -->
 <header
-  id="header"
-  class="fixed top-0 left-0 right-0 z-50 hidden md:block transition-all duration-300"
+  id="floating-nav"
+  class="floating-header fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden"
 >
-  <nav class="max-w-7xl mx-auto px-8 py-4">
-    <ul class="flex items-center gap-8 justify-center">
-      <li>
-        <a
-          href="#about"
-          class="text-gray-700 hover:text-black transition-colors font-medium"
-        >
-          About Me
-        </a>
-      </li>
-      {
-        hasProjects && (
-          <li>
-            <a
-              href="#projects"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Notable Matters
-            </a>
-          </li>
-        )
-      }
-      {
-        hasExperience && (
-          <li>
-            <a
-              href="#experience"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Experience
-            </a>
-          </li>
-        )
-      }
-      {
-        hasEducation && (
-          <li>
-            <a
-              href="#education"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Education
-            </a>
-          </li>
-        )
-      }
-      {
-        hasCredentials && (
-          <li>
-            <a
-              href="#credentials"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Credentials
-            </a>
-          </li>
-        )
-      }
-    </ul>
+  <nav
+    class="flex items-center gap-1 px-2 py-2 rounded-full shadow-lg backdrop-blur-md"
+    style={`background-color: ${siteConfig.colors.primaryDark}e6; border: 1px solid ${siteConfig.colors.accent}30`}
+  >
+    <a
+      href="#hero"
+      class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-colors"
+      style={`color: ${siteConfig.colors.surface}`}
+    >
+      Home
+    </a>
+    <a
+      href="#about"
+      class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-colors"
+      style={`color: ${siteConfig.colors.surface}`}
+    >
+      About
+    </a>
+    <a
+      href="#projects"
+      class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-colors"
+      style={`color: ${siteConfig.colors.surface}`}
+    >
+      Matters
+    </a>
+    <a
+      href="#experience"
+      class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-colors"
+      style={`color: ${siteConfig.colors.surface}`}
+    >
+      Experience
+    </a>
+    <a
+      href="#education"
+      class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-colors"
+      style={`color: ${siteConfig.colors.surface}`}
+    >
+      Education
+    </a>
   </nav>
 </header>
-
-<script>
-  window.addEventListener("scroll", () => {
-    const header = document.getElementById("header");
-    if (window.scrollY > 100) {
-      header?.classList.add("bg-white/80", "backdrop-blur-sm");
-    } else {
-      header?.classList.remove("bg-white/80", "backdrop-blur-sm");
-    }
-  });
-</script>
 
 <style>
   html {
     scroll-behavior: smooth;
   }
 </style>
+
+<script>
+  const nav = document.getElementById('floating-nav');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > 400) {
+      nav?.classList.remove('hidden');
+    } else {
+      nav?.classList.add('hidden');
+    }
+  });
+
+  // Active section highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = nav?.querySelectorAll('a');
+
+  const observerNav = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks?.forEach(link => {
+          link.style.backgroundColor = 'transparent';
+          if (link.getAttribute('href') === `#${entry.target.id}`) {
+            link.style.backgroundColor = 'rgba(74,144,164,0.2)';
+          }
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(section => observerNav.observe(section));
+</script>
