@@ -41,19 +41,21 @@ import { siteConfig } from "../config";
           {siteConfig.name}
         </h1>
 
-        <div class="hero-subtitle mt-4 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+        <div class="hero-subtitle mt-4 flex flex-col lg:flex-row items-center lg:items-center justify-center lg:justify-start gap-2">
           <span
             class="text-lg lg:text-xl font-medium"
             style={`color: ${siteConfig.colors.accent}`}
           >
-            {siteConfig.title.split("|")[0].trim()}
+            {siteConfig.title}
           </span>
-          <span
-            class="px-3 py-1 rounded-full text-xs font-semibold tracking-wide"
-            style={`background-color: ${siteConfig.colors.accent}20; color: ${siteConfig.colors.accent}`}
-          >
-            Ontario Bar
-          </span>
+          {siteConfig.location && (
+            <span
+              class="px-3 py-1 rounded-full text-xs font-semibold tracking-wide"
+              style={`background-color: ${siteConfig.colors.accent}20; color: ${siteConfig.colors.accent}`}
+            >
+              {siteConfig.location}
+            </span>
+          )}
         </div>
 
         {siteConfig.tagline && (

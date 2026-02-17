@@ -1,7 +1,8 @@
 export const siteConfig = {
   name: "Claudia Garcia",
-  title: "Contract Manager & Construction Lawyer | Ontario Bar",
-  description: "Portfolio of Claudia Garcia - International Lawyer specializing in construction law, contract management, and dispute resolution in Toronto, Canada",
+  title: "Infrastructure Contracts | Commercial Strategy | Dispute Resolution",
+  location: "Toronto, Canada",
+  description: "Portfolio of Claudia Garcia - International Lawyer specializing in infrastructure contracts, commercial strategy, and dispute resolution",
   accentColor: "#4A90A4",
   colors: {
     primaryDark: "#1b2838",
@@ -11,29 +12,29 @@ export const siteConfig = {
     surface: "#f0f4f7",
     surfaceLight: "#f8fafb",
   },
-  tagline: "Bridging legal frameworks across borders — from Lima courtrooms to Toronto boardrooms.",
+  tagline: "Bridging legal frameworks across borders for successful project execution in the Americas and globally.",
   stats: [
     { value: "10+", label: "Years Experience" },
-    { value: "CAD$80M+", label: "Value Secured" },
+    { value: ">$1B", label: "Cumulative project value" },
     { value: "5", label: "Languages" },
-    { value: "2", label: "Jurisdictions" },
+    { value: "4", label: "Jurisdictions" },
   ],
   quote: {
-    text: "The best contract is one that never needs to be litigated.",
+    text: "Clarity early, fewer issues later.",
     author: "Claudia Garcia",
   },
   cta: {
-    title: "Need a Construction Lawyer?",
-    description: "Whether it's contract management, dispute resolution, or navigating international legal frameworks — let's discuss how I can help protect your interests.",
+    title: "Let's connect.",
+    description: "",
     buttonText: "Get in Touch",
-    emailSubject: "Legal Consultation Inquiry",
+    emailSubject: "Connection Request",
   },
   social: {
     email: "cgarciamera@gmail.com",
     linkedin: "https://www.linkedin.com/in/claudiagarciamera",
   },
   aboutMe:
-    "Lawyer called to the Ontario Bar with 10+ years of international experience in complex commercial litigation, contract management, and dispute resolution across multi-million dollar construction and infrastructure projects. Currently leading contract management at Alstom Transport Canada, where I secured over CAD$80M in project value through strategic change management. Multilingual professional bridging legal frameworks across Peru and Canada, with a passion for mentoring diverse legal professionals.",
+    "I bring over a decade of international experience working on complex infrastructure programs, with a focus on contract management, negotiation, and dispute resolution in high‑stakes project environments.\n\nMy work spans large, multi‑party delivery settings across the Americas, where I support sound commercial decision‑making, manage contractual risk, and help teams navigate complexity with clarity and pragmatism.\n\nAs a multilingual professional, I bridge legal and commercial perspectives across cultures and jurisdictions, and I value collaborative learning and knowledge‑sharing within diverse teams.",
   skills: [
     "Contract Management",
     "Construction Law",
@@ -44,26 +45,37 @@ export const siteConfig = {
     "Risk Management",
     "Contract Drafting",
     "Change Management",
-    "Class Actions",
   ],
-  projects: [
+  experienceHighlights: [
     {
-      name: "CAD$80M+ Construction Change Management",
+      icon: "✅",
+      title: "Infrastructure Program Delivery (3+ years)",
       description:
-        "Led contract management for construction contractor systems at Alstom Transport Canada, securing over CAD$80 million in project value increase through strategic change management and contractual negotiations.",
-      skills: ["Contract Management", "Construction Law", "Negotiation"],
+        "Contract management and negotiation support across complex infrastructure programs, contributing to clearer scope definition, risk allocation, and issue management during project delivery.",
     },
     {
-      name: "USD$300M International Mining Arbitration",
+      icon: "✅",
+      title: "Dispute, Litigation & Escalation Risk Insight (4+ years)",
       description:
-        "Served as second chair at Torys LLP for an investor-state arbitration representing a Canadian mining company in a mid-construction mining project. Conducted 20+ witness interviews and managed document discovery.",
-      skills: ["International Arbitration", "Dispute Resolution", "Mining Law"],
+        "Experience across civil litigation and commercial disputes in Peru (civil law) and Canada (common law), including exposure to investor‑state infrastructure arbitration under the ICSID rules, informing a resolution‑first, delivery‑oriented approach to disputes.",
     },
     {
-      name: "UN COP20 Environmental Compliance",
+      icon: "✅",
+      title: "Regulatory Oversight (4+ years)",
       description:
-        "As Legal Counsel at Peru's Ministry of Environment, trained officials and government bodies in environmental compliance via 50+ seminars, including the United Nations COP20 public convention.",
-      skills: ["Environmental Law", "Energy Infrastructure", "Public Policy"],
+        "Public‑sector experience in Peru's environmental and electricity regulatory frameworks, including on‑site compliance assessments, enforcement coordination, and training programs for government bodies and private operators.",
+    },
+    {
+      icon: "✅",
+      title: "Cross-Border Commercial Practice",
+      description:
+        "Work spanning multiple jurisdictions and legal systems (Peru civil law, Ontario common law), with practical experience in international commercial transactions, investor-state mechanisms, and multi‑party stakeholder coordination.",
+    },
+    {
+      icon: "✅",
+      title: "Strategic Risk & Commercial Advisory",
+      description:
+        "Supporting executive-level decision-making through risk analysis, contract strategy, and commercial positioning in high-value, time-sensitive project environments with competing technical, legal, and business priorities.",
     },
   ],
   experience: [
@@ -146,9 +158,9 @@ export const siteConfig = {
     },
   ],
   languages: [
-    { name: "English", level: "Native / Bilingual" },
-    { name: "Spanish", level: "Native" },
-    { name: "French", level: "Professional Working" },
+    { name: "English", level: "Professional" },
+    { name: "Spanish", level: "Professional" },
+    { name: "French", level: "Limited Working Proficiency" },
     { name: "Italian", level: "Basic" },
     { name: "Portuguese", level: "Basic" },
   ],
