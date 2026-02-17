@@ -48,31 +48,31 @@ export const siteConfig = {
   ],
   experienceHighlights: [
     {
-      icon: "✅",
+      icon: "building",
       title: "Infrastructure Program Delivery (3+ years)",
       description:
         "Contract management and negotiation support across complex infrastructure programs, contributing to clearer scope definition, risk allocation, and issue management during project delivery.",
     },
     {
-      icon: "✅",
+      icon: "scale",
       title: "Dispute, Litigation & Escalation Risk Insight (4+ years)",
       description:
         "Experience across civil litigation and commercial disputes in Peru (civil law) and Canada (common law), including exposure to investor‑state infrastructure arbitration under the ICSID rules, informing a resolution‑first, delivery‑oriented approach to disputes.",
     },
     {
-      icon: "✅",
+      icon: "shield",
       title: "Regulatory Oversight (4+ years)",
       description:
         "Public‑sector experience in Peru's environmental and electricity regulatory frameworks, including on‑site compliance assessments, enforcement coordination, and training programs for government bodies and private operators.",
     },
     {
-      icon: "✅",
+      icon: "globe",
       title: "Cross-Border Commercial Practice",
       description:
         "Work spanning multiple jurisdictions and legal systems (Peru civil law, Ontario common law), with practical experience in international commercial transactions, investor-state mechanisms, and multi‑party stakeholder coordination.",
     },
     {
-      icon: "✅",
+      icon: "chart",
       title: "Strategic Risk & Commercial Advisory",
       description:
         "Supporting executive-level decision-making through risk analysis, contract strategy, and commercial positioning in high-value, time-sensitive project environments with competing technical, legal, and business priorities.",
