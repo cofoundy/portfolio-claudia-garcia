@@ -78,65 +78,6 @@ export const siteConfig = {
         "Supporting executive-level decision-making through risk analysis, contract strategy, and commercial positioning in high-value, time-sensitive project environments with competing technical, legal, and business priorities.",
     },
   ],
-  experience: [
-    {
-      company: "Alstom Transport Canada",
-      title: "Contract Manager - Construction Contractor Systems",
-      dateRange: "2022 - Present",
-      bullets: [
-        "Secured an increase of CAD$80+ million in project value through change management",
-        "Manage negotiation of variations, contract amendments, and claim management",
-        "Develop pragmatic commercial strategies to protect interests with customers and partners",
-      ],
-    },
-    {
-      company: "Scotiabank",
-      title: "Senior Manager - Credit Risk Initiatives",
-      dateRange: "2021",
-      bullets: [
-        "Spearheaded the revamping of the Senior Credit Risk Committee",
-        "Coordinated priorities, monitored project implementation, and managed communications",
-      ],
-    },
-    {
-      company: "Rochon Genova LLP",
-      title: "Articling Student - Commercial Litigation & Class Actions",
-      dateRange: "2020",
-      bullets: [
-        "Prepared briefs, motion materials and legal memoranda for 15+ litigation files",
-        "Assisted counsel in trial hearings and liaised with witnesses in high-profile litigation",
-      ],
-    },
-    {
-      company: "Torys LLP",
-      title: "Consultant - Litigation & International Arbitration",
-      dateRange: "2018 - 2019",
-      bullets: [
-        "Second chair for investor-state arbitration for a mining project valued at USD$300M+",
-        "Conducted 20+ fact and expert witness interviews and assisted with report drafting",
-        "Managed document review and discovery, completing briefs for memorials",
-      ],
-    },
-    {
-      company: "Ministry of Environment - Government of Peru",
-      title: "Legal Counsel - Power and Energy Infrastructure",
-      dateRange: "2013 - 2017",
-      bullets: [
-        "Ensured compliance for all stages of energy projects and applicable regulations",
-        "Formulated strategy for public investigations and administrative tribunals",
-        "Trained officials via 50+ seminars including the UN COP20 convention",
-      ],
-    },
-    {
-      company: "Matta Paredes Abogados",
-      title: "Associate - Civil and Commercial Litigation",
-      dateRange: "2013",
-      bullets: [
-        "Led 20+ commercial files at different stages of dispute resolution",
-        "Responsible for all contract drafting and negotiations",
-      ],
-    },
-  ],
   education: [
     {
       school: "University of Toronto, Faculty of Law",
